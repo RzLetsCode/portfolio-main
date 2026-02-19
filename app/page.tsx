@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { Github, Linkedin, Mail, ExternalLink, ArrowRight, Code, Database, Zap } from 'lucide-react';
+import { Github, Linkedin, Mail, ExternalLink, ArrowRight, Code, Database, Zap, BookOpen, MessageSquare } from 'lucide-react';
 
 export default function Home() {
   const skills = [
@@ -13,125 +13,164 @@ export default function Home() {
   const projects = [
     {
       title: 'Enterprise AI RAG System',
-      description: 'Built a Retrieval-Augmented Generation pipeline for enterprise knowledge management using LLMs and Pinecone vector database.',
+      description: 'Built a Retrieval-Augmented Generation pipeline for enterprise knowledge management using LLMs and Pinecone vector database. This system allows for semantic search and contextual answering over private document sets.',
       tech: ['Python', 'LangChain', 'Pinecone', 'Azure OpenAI'],
       link: '#',
+      details: 'Implemented a multi-stage RAG pipeline with hybrid search, re-ranking, and citation generation for a Fortune 500 financial client.'
     },
     {
       title: 'Multi-Agent AI Orchestration',
-      description: 'Designed and deployed a multi-agent system for automated business process automation with 8+ specialized agents.',
+      description: 'Designed and deployed a multi-agent system for automated business process automation with 8+ specialized agents. Orchestrates complex workflows across different LLM providers.',
       tech: ['Python', 'Agent Framework', 'Snowflake', 'Azure'],
       link: '#',
+      details: 'Built an autonomous agent cluster that reduced manual processing time by 70% in insurance claim verification workflows.'
     },
     {
       title: 'Healthcare AI Analytics Platform',
-      description: 'Developed a healthcare analytics platform processing 100K+ records daily with predictive insights and real-time dashboards.',
+      description: 'Developed a healthcare analytics platform processing 100K+ records daily with predictive insights and real-time dashboards for clinical decision support.',
       tech: ['Azure AI', 'Python', 'Snowflake', 'Data Science'],
       link: '#',
+      details: 'Created predictive models for patient readmission risks using distributed training on Azure Machine Learning Service.'
     },
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-800">
+    <div className="min-h-screen bg-slate-950 text-slate-100 font-sans selection:bg-cyan-500/30">
       {/* Navigation */}
-      <nav className="sticky top-0 z-50 bg-slate-950/80 backdrop-blur-md border-b border-slate-700/50">
-        <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-          <h1 className="text-2xl font-bold text-cyan-400">Rajesh Kumar</h1>
-          <div className="flex gap-6 text-sm">
-            <a href="#about" className="text-gray-300 hover:text-cyan-400 transition">About</a>
-            <a href="#projects" className="text-gray-300 hover:text-cyan-400 transition">Projects</a>
-            <a href="#skills" className="text-gray-300 hover:text-cyan-400 transition">Skills</a>
-            <a href="#contact" className="text-gray-300 hover:text-cyan-400 transition">Contact</a>
+      <nav className="sticky top-0 z-50 bg-slate-950/80 backdrop-blur-md border-b border-slate-800/50">
+        <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+          <h1 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-emerald-400 bg-clip-text text-transparent">Rajesh Kumar</h1>
+          <div className="hidden md:flex gap-8 text-sm font-medium">
+            <Link href="#about" className="hover:text-cyan-400 transition-colors">About</Link>
+            <Link href="#projects" className="hover:text-cyan-400 transition-colors">Projects</Link>
+            <Link href="#skills" className="hover:text-cyan-400 transition-colors">Skills</Link>
+            <Link href="https://hashnode.com/@rz111" target="_blank" className="hover:text-cyan-400 transition-colors flex items-center gap-1">
+              Blog <ExternalLink size={14} />
+            </Link>
+            <Link href="#contact" className="hover:text-cyan-400 transition-colors">Contact</Link>
           </div>
         </div>
       </nav>
 
-      {/* Hero Section with Introduction */}
-      <section className="py-24 px-4 text-center max-w-6xl mx-auto">
-        <div className="mb-8">
-          <div className="inline-block bg-cyan-500/10 border border-cyan-500/30 rounded-full px-4 py-2 mb-6">
-            <p className="text-cyan-400 text-sm font-semibold">🚀 Enterprise AI Architect</p>
+      {/* Hero Section */}
+      <section className="relative py-24 px-6 overflow-hidden">
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[600px] bg-cyan-500/10 blur-[120px] rounded-full -z-10"></div>
+        <div className="max-w-4xl mx-auto text-center">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-sm font-medium mb-8">
+            <Zap size={14} /> Enterprise AI Architect
           </div>
-        </div>
-        <h1 className="text-6xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-cyan-400 to-emerald-400 bg-clip-text text-transparent">
-          Building Production-Grade AI Systems
-        </h1>
-        <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto leading-relaxed">
-          I\'m an Enterprise AI Architect with 8+ years of experience building scalable AI solutions for healthcare, finance, and enterprise domains. Specializing in Snowflake, Azure OpenAI, and production-ready AI pipelines.
-        </p>
-        <p className="text-lg text-gray-400 mb-12 max-w-2xl mx-auto">
-          Currently leading AI initiatives at Kforce, designing enterprise-grade systems that process millions of records and deliver real-time insights through advanced RAG and multi-agent architectures.
-        </p>
-        <div className="flex gap-4 justify-center mb-12">
-          <a href="#projects" className="px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold rounded-lg transition flex items-center gap-2">
-            View My Work <ExternalLink size={18} />
-          </a>
-          <a href="#contact" className="px-8 py-3 border border-cyan-500/50 text-cyan-400 hover:bg-cyan-500/10 font-semibold rounded-lg transition">
-            Get In Touch
-          </a>
-        </div>
-        <div className="flex gap-4 justify-center">
-          <a href="https://github.com/RzLetsCode" target="_blank" rel="noopener noreferrer" className="p-3 bg-slate-800 hover:bg-slate-700 rounded-lg transition">
-            <Github className="text-gray-400 hover:text-cyan-400" size={24} />
-          </a>
-          <a href="https://linkedin.com/in/rajesh-kumar-04405962/" target="_blank" rel="noopener noreferrer" className="p-3 bg-slate-800 hover:bg-slate-700 rounded-lg transition">
-            <Linkedin className="text-gray-400 hover:text-cyan-400" size={24} />
-          </a>
-          <a href="mailto:rajeshrajrz111@gmail.com" className="p-3 bg-slate-800 hover:bg-slate-700 rounded-lg transition">
-            <Mail className="text-gray-400 hover:text-cyan-400" size={24} />
-          </a>
+          <h2 className="text-5xl md:text-7xl font-extrabold mb-8 tracking-tight leading-tight">
+            Building <span className="text-cyan-400">Production-Grade</span> AI Systems
+          </h2>
+          <p className="text-xl text-slate-400 mb-10 max-w-2xl mx-auto leading-relaxed">
+            Enterprise AI Architect with 8+ years of experience building scalable solutions for healthcare, finance, and enterprise domains.
+          </p>
+          
+          <div className="flex flex-wrap gap-4 justify-center">
+            <Link href="#projects" className="px-8 py-4 bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold rounded-lg transition-all shadow-lg shadow-cyan-500/20 flex items-center gap-2 transform hover:-translate-y-1">
+              View Projects <ArrowRight size={18} />
+            </Link>
+            <Link href="https://hashnode.com/@rz111" target="_blank" className="px-8 py-4 bg-slate-800 hover:bg-slate-700 text-white font-bold rounded-lg transition-all border border-slate-700 flex items-center gap-2 transform hover:-translate-y-1">
+              Read Blog <BookOpen size={18} />
+            </Link>
+          </div>
+
+          <div className="mt-12 flex gap-6 justify-center">
+            <Link href="https://github.com/RzLetsCode" target="_blank" className="p-3 bg-slate-900 border border-slate-800 rounded-full hover:border-cyan-500/50 hover:text-cyan-400 transition-all">
+              <Github size={24} />
+            </Link>
+            <Link href="https://linkedin.com/in/rajesh-kumar-04405962/" target="_blank" className="p-3 bg-slate-900 border border-slate-800 rounded-full hover:border-cyan-500/50 hover:text-cyan-400 transition-all">
+              <Linkedin size={24} />
+            </Link>
+            <Link href="mailto:rajeshrajrz111@gmail.com" className="p-3 bg-slate-900 border border-slate-800 rounded-full hover:border-cyan-500/50 hover:text-cyan-400 transition-all">
+              <Mail size={24} />
+            </Link>
+          </div>
         </div>
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-20 px-4 bg-gradient-to-b from-slate-900 to-slate-950 border-t border-slate-700/50">
+      <section id="about" className="py-24 px-6 bg-slate-900/50 border-y border-slate-800/50">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold text-white mb-12 text-center">About Me</h2>
-          <div className="grid md:grid-cols-2 gap-12">
+          <div className="grid md:grid-cols-2 gap-16 items-center">
             <div>
-              <h3 className="text-2xl font-bold text-cyan-400 mb-4 flex items-center gap-2">
-                <Code size={28} /> Expertise
-              </h3>
-              <ul className="space-y-3 text-gray-300">
-                <li>✅ <strong>AI & LLMs</strong>: RAG pipelines, multi-agent systems, prompt engineering</li>
-                <li>✅ <strong>Data Platforms</strong>: Snowflake, data warehousing, analytics</li>
-                <li>✅ <strong>Cloud Architecture</strong>: Azure, scalable infrastructure design</li>
-                <li>✅ <strong>Production AI</strong>: MLOps, deployment, monitoring, optimization</li>
-              </ul>
+              <h2 className="text-3xl font-bold mb-6 flex items-center gap-3">
+                <span className="w-8 h-1 bg-cyan-500 rounded-full"></span>
+                About Me
+              </h2>
+              <p className="text-lg text-slate-400 mb-8 leading-relaxed">
+                I specialize in designing and implementing robust AI architectures that solve real-world business challenges. My focus is on the intersection of Data Engineering, LLM orchestration, and Cloud-Native scaling.
+              </p>
+              <div className="space-y-4">
+                <div className="flex gap-4 p-4 bg-slate-800/50 border border-slate-700/50 rounded-xl">
+                  <div className="p-2 bg-cyan-500/10 rounded-lg text-cyan-400 h-fit"><Code size={20} /></div>
+                  <div>
+                    <h4 className="font-bold mb-1 text-slate-200">System Design</h4>
+                    <p className="text-sm text-slate-400 italic">Designing scalable, resilient enterprise AI infrastructures.</p>
+                  </div>
+                </div>
+                <div className="flex gap-4 p-4 bg-slate-800/50 border border-slate-700/50 rounded-xl">
+                  <div className="p-2 bg-emerald-500/10 rounded-lg text-emerald-400 h-fit"><Database size={20} /></div>
+                  <div>
+                    <h4 className="font-bold mb-1 text-slate-200">Data Mastery</h4>
+                    <p className="text-sm text-slate-400 italic">Expertise in Snowflake and modern data lakehouse patterns.</p>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div>
-              <h3 className="text-2xl font-bold text-emerald-400 mb-4 flex items-center gap-2">
-                <Zap size={28} /> Impact
-              </h3>
-              <ul className="space-y-3 text-gray-300">
-                <li>🎯 <strong>Healthcare</strong>: Built AI systems processing 100K+ daily records</li>
-                <li>🎯 <strong>Enterprise</strong>: Deployed multi-agent systems across Fortune 500 companies</li>
-                <li>🎯 <strong>Performance</strong>: Optimized pipelines achieving 99.9% uptime</li>
-                <li>🎯 <strong>Innovation</strong>: Published technical content on AI architecture</li>
-              </ul>
+            <div className="grid grid-cols-2 gap-4">
+              <div className="p-8 bg-slate-800/30 border border-slate-700/30 rounded-2xl text-center">
+                <div className="text-3xl font-bold text-cyan-400 mb-2">8+</div>
+                <div className="text-sm text-slate-500 uppercase tracking-wider">Years Exp</div>
+              </div>
+              <div className="p-8 bg-slate-800/30 border border-slate-700/30 rounded-2xl text-center">
+                <div className="text-3xl font-bold text-emerald-400 mb-2">50+</div>
+                <div className="text-sm text-slate-500 uppercase tracking-wider">Deployments</div>
+              </div>
+              <div className="p-8 bg-slate-800/30 border border-slate-700/30 rounded-2xl text-center">
+                <div className="text-3xl font-bold text-blue-400 mb-2">100k</div>
+                <div className="text-sm text-slate-500 uppercase tracking-wider">Daily Records</div>
+              </div>
+              <div className="p-8 bg-slate-800/30 border border-slate-700/30 rounded-2xl text-center">
+                <div className="text-3xl font-bold text-purple-400 mb-2">99.9%</div>
+                <div className="text-sm text-slate-500 uppercase tracking-wider">Uptime</div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="py-20 px-4">
+      <section id="projects" className="py-24 px-6">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold text-white mb-4 text-center">Featured Projects</h2>
-          <p className="text-gray-400 text-center mb-12 max-w-2xl mx-auto">Showcasing enterprise-grade AI solutions I've built and deployed in production</p>
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold mb-4">Featured Projects</h2>
+            <p className="text-slate-400">Deep dive into my recent technical implementations</p>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8">
             {projects.map((project, i) => (
-              <div key={i} className="bg-gradient-to-br from-slate-800 to-slate-900 border border-slate-700 rounded-lg p-6 hover:border-cyan-500/50 transition group">
-                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition">{project.title}</h3>
-                <p className="text-gray-400 text-sm mb-4">{project.description}</p>
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {project.tech.map((tech, j) => (
-                    <span key={j} className="px-2 py-1 bg-cyan-500/20 text-cyan-300 text-xs rounded">{tech}</span>
+              <div key={i} className="group p-6 bg-slate-900 border border-slate-800 rounded-2xl hover:border-cyan-500/50 transition-all flex flex-col h-full relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-cyan-500/5 blur-3xl -z-10 group-hover:bg-cyan-500/20 transition-all"></div>
+                <h3 className="text-xl font-bold mb-3 text-slate-100 group-hover:text-cyan-400 transition-colors">{project.title}</h3>
+                <p className="text-slate-400 text-sm mb-6 flex-grow leading-relaxed">{project.description}</p>
+                
+                <div className="mb-6">
+                  <p className="text-xs font-bold text-slate-500 uppercase tracking-widest mb-3">Impact Details</p>
+                  <p className="text-sm text-slate-300 italic mb-4 border-l-2 border-cyan-500/30 pl-3">
+                    {project.details}
+                  </p>
+                </div>
+
+                <div className="flex flex-wrap gap-2 mb-8">
+                  {project.tech.map((t, j) => (
+                    <span key={j} className="text-[10px] font-bold px-2 py-1 bg-slate-800 text-slate-300 rounded-md border border-slate-700">{t}</span>
                   ))}
                 </div>
-                <a href={project.link} className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 font-semibold text-sm">
-                  Learn More <ArrowRight size={16} />
-                </a>
+                
+                <Link href={project.link} className="inline-flex items-center gap-2 text-cyan-400 font-bold hover:text-cyan-300 transition-colors group/btn">
+                  Learn Project Details <ArrowRight size={16} className="group-hover/btn:translate-x-1 transition-transform" />
+                </Link>
               </div>
             ))}
           </div>
@@ -139,23 +178,23 @@ export default function Home() {
       </section>
 
       {/* Skills Section */}
-      <section id="skills" className="py-20 px-4 bg-gradient-to-b from-slate-950 to-slate-900 border-t border-slate-700/50">
+      <section id="skills" className="py-24 px-6 bg-slate-900/30">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold text-white mb-12 text-center">Technical Skills</h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            {skills.map((skill, i) => (
-              <div key={i} className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-slate-700 rounded-lg p-6">
-                <h3 className="text-xl font-bold text-emerald-400 mb-4 flex items-center gap-2">
-                  <Database size={24} /> {skill.category}
+          <h2 className="text-3xl font-bold mb-16 text-center">Technical Arsenal</h2>
+          <div className="grid md:grid-cols-3 gap-12">
+            {skills.map((skillGroup, i) => (
+              <div key={i}>
+                <h3 className="text-lg font-bold mb-6 text-cyan-400 uppercase tracking-widest flex items-center gap-2">
+                  {i === 0 ? <Zap size={18} /> : i === 1 ? <Database size={18} /> : <Code size={18} />}
+                  {skillGroup.category}
                 </h3>
-                <ul className="space-y-2">
-                  {skill.items.map((item, j) => (
-                    <li key={j} className="text-gray-300 flex items-center gap-2">
-                      <span className="w-2 h-2 bg-cyan-400 rounded-full"></span>
-                      {item}
-                    </li>
+                <div className="flex flex-wrap gap-3">
+                  {skillGroup.items.map((skill, j) => (
+                    <span key={j} className="px-4 py-2 bg-slate-800/50 border border-slate-700/50 rounded-lg text-sm font-medium hover:border-cyan-500/30 transition-all cursor-default">
+                      {skill}
+                    </span>
                   ))}
-                </ul>
+                </div>
               </div>
             ))}
           </div>
@@ -163,35 +202,30 @@ export default function Home() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-20 px-4">
-        <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-4xl font-bold text-white mb-6">Get In Touch</h2>
-          <p className="text-gray-400 mb-12 max-w-2xl mx-auto text-lg">
-            Have an AI project? Let's discuss how I can help build production-grade AI systems for your organization.
-          </p>
-          <div className="grid md:grid-cols-3 gap-6 mb-12">
-            <a href="mailto:rajeshrajrz111@gmail.com" className="p-6 bg-slate-800 rounded-lg hover:bg-slate-700 transition group">
-              <Mail className="text-cyan-400 group-hover:text-cyan-300 mx-auto mb-3" size={32} />
-              <p className="text-gray-300 font-semibold">rajeshrajrz111@gmail.com</p>
-            </a>
-            <a href="tel:+918800911440" className="p-6 bg-slate-800 rounded-lg hover:bg-slate-700 transition group">
-              <Zap className="text-emerald-400 group-hover:text-emerald-300 mx-auto mb-3" size={32} />
-              <p className="text-gray-300 font-semibold">+91-8800911440</p>
-            </a>
-            <a href="https://linkedin.com/in/rajesh-kumar-04405962/" target="_blank" rel="noopener noreferrer" className="p-6 bg-slate-800 rounded-lg hover:bg-slate-700 transition group">
-              <Linkedin className="text-cyan-400 group-hover:text-cyan-300 mx-auto mb-3" size={32} />
-              <p className="text-gray-300 font-semibold">Connect on LinkedIn</p>
-            </a>
+      <section id="contact" className="py-24 px-6">
+        <div className="max-w-4xl mx-auto bg-gradient-to-br from-slate-900 to-slate-800 p-12 rounded-3xl border border-slate-700 text-center relative overflow-hidden">
+          <div className="absolute -top-24 -left-24 w-64 h-64 bg-cyan-500/20 blur-[100px] rounded-full"></div>
+          <div className="relative z-10">
+            <h2 className="text-4xl font-bold mb-6">Let's Build the Future</h2>
+            <p className="text-slate-400 mb-12 text-lg">Discussing AI architecture, RAG pipelines, or multi-agent systems?</p>
+            
+            <div className="flex flex-wrap justify-center gap-6">
+              <Link href="mailto:rajeshrajrz111@gmail.com" className="flex items-center gap-3 px-8 py-4 bg-slate-800 hover:bg-slate-700 border border-slate-700 rounded-xl transition-all">
+                <Mail className="text-cyan-400" />
+                <span className="font-bold">Email Me</span>
+              </Link>
+              <Link href="https://linkedin.com/in/rajesh-kumar-04405962/" target="_blank" className="flex items-center gap-3 px-8 py-4 bg-slate-800 hover:bg-slate-700 border border-slate-700 rounded-xl transition-all">
+                <Linkedin className="text-cyan-400" />
+                <span className="font-bold">LinkedIn</span>
+              </Link>
+            </div>
+            
+            <div className="mt-12 pt-12 border-t border-slate-700/50 text-slate-500 text-sm">
+              <p>© 2026 Rajesh Kumar • Enterprise AI Architect • Pune, India</p>
+            </div>
           </div>
         </div>
       </section>
-
-      {/* Footer */}
-      <footer className="py-8 px-4 border-t border-slate-700/50 bg-slate-950">
-        <div className="max-w-6xl mx-auto text-center text-gray-400">
-          <p>© 2024 Rajesh Kumar. Enterprise AI Architect based in Pune, India.</p>
-        </div>
-      </footer>
     </div>
   );
 }
