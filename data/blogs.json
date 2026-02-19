@@ -1,0 +1,34 @@
+{
+  "blogs": [
+    {
+      "id": "1",
+      "title": "Building Scalable AI Architecture with Next.js and TypeScript",
+      "excerpt": "Learn how to architect large-scale AI applications using modern Python and cloud infrastructure.",
+      "date": "2024-02-19",
+      "readingTime": "12 min read",
+      "tags": ["AI", "Architecture", "Next.js", "TypeScript"],
+      "category": "Technical",
+      "image": "/images/blog/ai-architecture.jpg"
+    },
+    {
+      "id": "2",
+      "title": "Enterprise AI: From Concept to Production",
+      "excerpt": "A deep dive into deploying AI models at enterprise scale with Snowflake and Azure OpenAI.",
+      "date": "2024-02-15",
+      "readingTime": "15 min read",
+      "tags": ["Enterprise", "AI", "Snowflake", "Azure"],
+      "category": "Tutorial",
+      "image": "/images/blog/enterprise-ai.jpg"
+    },
+    {
+      "id": "3",
+      "title": "RAG Pipelines: Building Knowledge-Aware AI Systems",
+      "excerpt": "Implementing Retrieval-Augmented Generation for accurate and contextual AI responses.",
+      "date": "2024-02-10",
+      "readingTime": "18 min read",
+      "tags": ["RAG", "LLM", "Pinecone", "Python"],
+      "category": "Guide",
+      "image": "/images/blog/rag-pipeline.jpg"
+    }
+  ]
+}
