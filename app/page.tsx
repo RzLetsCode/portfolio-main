@@ -64,7 +64,7 @@ export default function Home() {
  <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1200px] h-[700px] bg-cyan-500/10 blur-[150px] rounded-full -z-10"></div>
  <div className="max-w-5xl mx-auto text-center">
  <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-sm font-semibold mb-10 shadow-lg shadow-cyan-500/5">
- <Zap size={14} className="animate-pulse" /> Enterprise AI Architect & YouTuber
+ <Zap size={14} className="animate-pulse" /> Enterprise AI Architect & Mentor
  </div>
  <h2 className="text-6xl md:text-8xl font-black mb-10 tracking-tight leading-[1.1]">
  Architecting <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Intelligence</span>
