@@ -25,15 +25,16 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Disable Jekyll
-        run: touch ./public/.nojekyll
-
       - name: Build with Next.js
         env:
           NEXT_PUBLIC_EMAILJS_SERVICE_ID: ${{ secrets.NEXT_PUBLIC_EMAILJS_SERVICE_ID }}
           NEXT_PUBLIC_EMAILJS_TEMPLATE_ID: ${{ secrets.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID }}
           NEXT_PUBLIC_EMAILJS_PUBLIC_KEY: ${{ secrets.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY }}
         run: npm run build
+
+      # Moved this step to run AFTER the build, targeting the "out" folder directly
+      - name: Disable Jekyll
+        run: touch ./out/.nojekyll
 
       - name: Upload artifact to Pages
         uses: actions/upload-pages-artifact@v4
