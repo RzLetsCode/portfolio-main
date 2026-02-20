@@ -49,7 +49,7 @@ export default function Home() {
  <Link href="#about" className="hover:text-cyan-400 transition-colors">About</Link>
  <Link href="#projects" className="hover:text-cyan-400 transition-colors">Projects</Link>
  <Link href="#skills" className="hover:text-cyan-400 transition-colors">Skills</Link>
- <Link href="https://hashnode.com/@rz111" target="_blank" className="hover:text-cyan-400 transition-colors flex items-center gap-1">
+ <Link href="https://hashnode.com/@code2career-ai" target="_blank" className="hover:text-cyan-400 transition-colors flex items-center gap-1">
  Blogs <ExternalLink size={14} />
  </Link>
  <Link href="https://www.youtube.com/@Code2Career_AI" target="_blank" className="hover:text-red-500 transition-colors flex items-center gap-1">
@@ -78,7 +78,7 @@ Learn to design, build, and deploy advanced AI solutions. Master production-grad
  <Link href="https://www.youtube.com/@Code2Career_AI" target="_blank" className="px-10 py-4 bg-red-600 hover:bg-red-500 text-white font-black rounded-xl transition-all shadow-xl shadow-red-600/20 flex items-center gap-2 transform hover:-translate-y-1 active:scale-95">
  Code2Career_AI <Youtube size={20} />
  </Link>
- <Link href="https://hashnode.com/@rz111" target="_blank" className="px-10 py-4 bg-slate-800 hover:bg-slate-700 text-white font-black rounded-xl transition-all border border-slate-700 flex items-center gap-2 transform hover:-translate-y-1 active:scale-95">
+ <Link href="https://hashnode.com/@code2career-ai" target="_blank" className="px-10 py-4 bg-slate-800 hover:bg-slate-700 text-white font-black rounded-xl transition-all border border-slate-700 flex items-center gap-2 transform hover:-translate-y-1 active:scale-95">
  Technical Blog <BookOpen size={20} />
  </Link>
  </div>
