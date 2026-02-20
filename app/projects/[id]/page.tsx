@@ -132,7 +132,7 @@ export default async function ProjectDetail({ params }: { params: Promise<{ id: 
             <Link href="https://github.com/RzLetsCode" target="_blank" className="p-4 bg-slate-900 rounded-xl hover:text-cyan-400 transition-colors border border-slate-800">
               <Github size={20} />
             </Link>
-            <Link href="https://linkedin.com/in/rajesh-kumar-04405962/" target="_blank" className="p-4 bg-slate-900 rounded-xl hover:text-cyan-400 transition-colors border border-slate-800">
+            <Link href="https://www.linkedin.com/company/code2career-ai/?viewAsMember=true" target="_blank" className="p-4 bg-slate-900 rounded-xl hover:text-cyan-400 transition-colors border border-slate-800">
               <Linkedin size={20} />
             </Link>
           </div>
