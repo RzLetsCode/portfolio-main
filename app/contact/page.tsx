@@ -3,7 +3,6 @@
 import { useState, FormEvent, ChangeEvent } from 'react';
 import Link from 'next/link';
 import { Mail, Phone, FileText, ArrowLeft } from 'lucide-react';
-// 1. Import EmailJS
 import emailjs from '@emailjs/browser';
 
 interface FormData {
@@ -36,7 +35,7 @@ export default function ContactPage() {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // 2. Map form data to EmailJS template variables
+    // Map your React state to the variables in your EmailJS template
     const templateParams = {
       from_name: formData.name,
       from_email: formData.email,
@@ -45,7 +44,7 @@ export default function ContactPage() {
     };
 
     try {
-      // 3. Send using EmailJS directly to their servers (Fixes the 405 error)
+      // Send directly to EmailJS, bypassing the need for a local API route
       const response = await emailjs.send(
         process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
         process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
@@ -62,12 +61,10 @@ export default function ContactPage() {
           purpose: '',
         });
         setTimeout(() => setSubmitMessage(''), 5000);
-      } else {
-        setSubmitMessage('Error sending message. Please try again.');
       }
     } catch (error) {
-      console.error('Message submission error:', error);
-      setSubmitMessage('Error sending message. Please check your information and try again.');
+      console.error('EmailJS Error:', error);
+      setSubmitMessage('Error sending message. Please check your connection and try again.');
     } finally {
       setIsSubmitting(false);
     }
@@ -91,11 +88,8 @@ export default function ContactPage() {
           onSubmit={handleSubmit}
           className="space-y-6 bg-gradient-to-br from-slate-900 to-slate-950 p-8 rounded-3xl border border-slate-800 shadow-2xl"
         >
-          {/* Name Field */}
           <div>
-            <label htmlFor="name" className="block text-sm font-medium mb-2">
-              Full Name *
-            </label>
+            <label htmlFor="name" className="block text-sm font-medium mb-2">Full Name *</label>
             <input
               id="name"
               type="text"
@@ -108,11 +102,8 @@ export default function ContactPage() {
             />
           </div>
 
-          {/* Email Field */}
           <div>
-            <label htmlFor="email" className="block text-sm font-medium mb-2">
-              Email Address *
-            </label>
+            <label htmlFor="email" className="block text-sm font-medium mb-2">Email Address *</label>
             <input
               id="email"
               type="email"
@@ -125,11 +116,8 @@ export default function ContactPage() {
             />
           </div>
 
-          {/* Phone Field */}
           <div>
-            <label htmlFor="phone" className="block text-sm font-medium mb-2">
-              Phone Number *
-            </label>
+            <label htmlFor="phone" className="block text-sm font-medium mb-2">Phone Number *</label>
             <input
               id="phone"
               type="tel"
@@ -142,11 +130,8 @@ export default function ContactPage() {
             />
           </div>
 
-          {/* Purpose Field */}
           <div>
-            <label htmlFor="purpose" className="block text-sm font-medium mb-2">
-              Purpose/Message *
-            </label>
+            <label htmlFor="purpose" className="block text-sm font-medium mb-2">Purpose/Message *</label>
             <textarea
               id="purpose"
               name="purpose"
@@ -158,7 +143,6 @@ export default function ContactPage() {
             />
           </div>
 
-          {/* Submit Message */}
           {submitMessage && (
             <div className={`p-4 rounded-lg ${
               submitMessage.includes('✓')
@@ -169,7 +153,6 @@ export default function ContactPage() {
             </div>
           )}
 
-          {/* Submit Button */}
           <button
             type="submit"
             disabled={isSubmitting}
