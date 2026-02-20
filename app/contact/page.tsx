@@ -3,6 +3,8 @@
 import { useState, FormEvent, ChangeEvent } from 'react';
 import Link from 'next/link';
 import { Mail, Phone, FileText, ArrowLeft } from 'lucide-react';
+// 1. Import EmailJS
+import emailjs from '@emailjs/browser';
 
 interface FormData {
   name: string;
@@ -34,18 +36,25 @@ export default function ContactPage() {
     e.preventDefault();
     setIsSubmitting(true);
 
-    try {
-      // Send message to email endpoint
-      const response = await fetch('/api/contact', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      });
+    // 2. Map form data to EmailJS template variables
+    const templateParams = {
+      from_name: formData.name,
+      from_email: formData.email,
+      phone_number: formData.phone,
+      message: formData.purpose,
+    };
 
-      if (response.ok) {
-        setSubmitMessage('✓ Thank you! Your message has been sent successfully. I\'ll get back to you within 24 hours.');
+    try {
+      // 3. Send using EmailJS directly to their servers (Fixes the 405 error)
+      const response = await emailjs.send(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
+        templateParams,
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
+      );
+
+      if (response.status === 200) {
+        setSubmitMessage("✓ Thank you! Your message has been sent successfully. I'll get back to you within 24 hours.");
         setFormData({
           name: '',
           phone: '',
