@@ -10,8 +10,8 @@ You now have:
 
 ### Phase 1: Local Setup (5 min)
 ```bash
-git clone https://github.com/RzLetsCode/portfolio-main.git
-cd portfolio-main
+git clone https://github.com/RzLetsCode/code2career_ai.git
+cd code2career_ai
 npm install
 ```
 
@@ -67,7 +67,7 @@ Then in GitHub:
 1. Settings > Pages
 2. Build and Deployment > Source > GitHub Actions
 3. Wait 2-3 minutes
-4. Visit: https://rzletscode.github.io/portfolio-main/
+4. Visit: https://rzletscode.github.io/code2career_ai/
 
 ## Your Contact Info
 - Email: rajeshrajrz111@gmail.com

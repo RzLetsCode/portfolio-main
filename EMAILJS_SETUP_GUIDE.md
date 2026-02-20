@@ -183,7 +183,7 @@ If you exceed limits, you can upgrade to a paid plan.
 
 - [EmailJS Documentation](https://www.emailjs.com/docs/)
 - [EmailJS Contact Support](https://www.emailjs.com/contact-us/)
-- [GitHub Issues](https://github.com/RzLetsCode/portfolio-main/issues)
+- [GitHub Issues](https://github.com/RzLetsCode/code2career_ai/issues)
 
 ## Additional Resources
 

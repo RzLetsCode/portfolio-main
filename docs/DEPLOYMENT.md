@@ -1,8 +1,8 @@
 # Deployment Guide
 
-## Portfolio-Main Deployment Instructions
+## code2career_ai Deployment Instructions
 
-This guide provides step-by-step instructions for deploying the portfolio-main project.
+This guide provides step-by-step instructions for deploying the code2career_ai project.
 
 ## Prerequisites
 
@@ -18,8 +18,8 @@ This guide provides step-by-step instructions for deploying the portfolio-main p
 The project is already configured to deploy via GitHub Pages. GitHub automatically deploys changes pushed to the main branch.
 
 **Current Configuration:**
-- **Repository**: https://github.com/RzLetsCode/portfolio-main
-- **Live Site**: https://rzletscode.github.io/portfolio-main/
+- **Repository**: https://github.com/RzLetsCode/code2career_ai
+- **Live Site**: https://rzletscode.github.io/code2career_ai/
 - **Source**: main branch, root directory
 - **Deployment Status**: Active
 
@@ -28,8 +28,8 @@ The project is already configured to deploy via GitHub Pages. GitHub automatical
 #### Step 1: Clone the Repository
 
 ```bash
-git clone https://github.com/RzLetsCode/portfolio-main.git
-cd portfolio-main
+git clone https://github.com/RzLetsCode/code2career_ai.git
+cd code2career_ai
 ```
 
 #### Step 2: Run Local Server
@@ -71,7 +71,7 @@ git push origin main
 #### Step 4: Verify Deployment
 
 - GitHub Actions will automatically build and deploy
-- Check the live site: https://rzletscode.github.io/portfolio-main/
+- Check the live site: https://rzletscode.github.io/code2career_ai/
 - Deployment typically completes within 1-2 minutes
 
 ## Making Updates
@@ -121,7 +121,7 @@ Folder: / (root)
 
 ### To Modify Settings
 
-1. Go to: https://github.com/RzLetsCode/portfolio-main/settings/pages
+1. Go to: https://github.com/RzLetsCode/code2career_ai/settings/pages
 2. Under "Build and deployment":
    - Select source branch (currently: main)
    - Select folder (currently: / root)
@@ -154,7 +154,7 @@ Folder: / (root)
 
 1. Clear browser cache (Ctrl+Shift+Delete)
 2. Wait 2-5 minutes for GitHub Pages to rebuild
-3. Check commit history: https://github.com/RzLetsCode/portfolio-main/commits/main
+3. Check commit history: https://github.com/RzLetsCode/code2career_ai/commits/main
 4. Verify build status in GitHub Actions
 
 ### 404 Errors
@@ -190,7 +190,7 @@ Consider adding:
 
 To use a custom domain:
 
-1. Go to: https://github.com/RzLetsCode/portfolio-main/settings/pages
+1. Go to: https://github.com/RzLetsCode/code2career_ai/settings/pages
 2. Under "Custom domain", enter your domain
 3. Update DNS records at your domain provider
 4. Wait for HTTPS certificate (24-48 hours)
@@ -199,7 +199,7 @@ To use a custom domain:
 
 ### Check Live Site
 
-- Visit: https://rzletscode.github.io/portfolio-main/
+- Visit: https://rzletscode.github.io/code2career_ai/
 - Test all links and forms
 - Verify responsive design on mobile
 
@@ -229,7 +229,7 @@ git push origin main
 
 - GitHub Pages Documentation: https://pages.github.com/
 - Git Documentation: https://git-scm.com/doc
-- Repository Issues: https://github.com/RzLetsCode/portfolio-main/issues
+- Repository Issues: https://github.com/RzLetsCode/code2career_ai/issues
 - ARCHITECTURE.md: Detailed project structure
 - MIGRATION-GUIDE.md: Setup and migration guide
 
@@ -245,4 +245,4 @@ git push origin main
 
 **Last Updated**: February 2026
 **Deployment Status**: ✅ Active
-**Live Site**: https://rzletscode.github.io/portfolio-main/
+**Live Site**: https://rzletscode.github.io/code2career_ai/

@@ -1,4 +1,4 @@
-# Portfolio-Main: File Migration Guide
+# code2career_ai: File Migration Guide
 
 This guide provides step-by-step instructions to migrate all portfolio files from the monorepo to this repository.
 
@@ -20,12 +20,12 @@ cd temp-source
 git subtree split --prefix='' -b portfolio-files-only
 ```
 
-### Step 3: Clone Current portfolio-main
+### Step 3: Clone Current code2career_ai
 
 ```bash
 cd ..
-git clone https://github.com/RzLetsCode/portfolio-main.git portfolio-main
-cd portfolio-main
+git clone https://github.com/RzLetsCode/code2career_ai.git code2career_ai
+cd code2career_ai
 ```
 
 ### Step 4: Add Files from Source
@@ -37,7 +37,7 @@ git pull ../temp-source portfolio-files-only --allow-unrelated-histories
 
 ### Step 5: Organize Files (If needed)
 
-Since the portfolio files are in the root of the source, they should be directly in the root of portfolio-main.
+Since the portfolio files are in the root of the source, they should be directly in the root of code2career_ai.
 
 ```bash
 # Verify files are in correct location
@@ -93,7 +93,7 @@ All files in the **assets/** directory:
    - Open the file (e.g., index.html)
    - Click "Raw" button
    - Select all (Ctrl+A) and copy
-   - Go to portfolio-main repository
+   - Go to code2career_ai repository
    - Click "Add file" > "Create new file"
    - Paste name and content
    - Commit
@@ -111,11 +111,11 @@ unzip portfolio-template-main.zip
 cd portfolio-template-main
 
 # Copy only portfolio files
-cp -r *.html ../portfolio-main-temp/
-cp -r css/ ../portfolio-main-temp/
-cp -r assets/ ../portfolio-main-temp/
+cp -r *.html ../code2career_ai-temp/
+cp -r css/ ../code2career_ai-temp/
+cp -r assets/ ../code2career_ai-temp/
 
-# Upload to portfolio-main repository via GitHub web interface
+# Upload to code2career_ai repository via GitHub web interface
 ```
 
 ---
@@ -127,7 +127,7 @@ Fastest method using git:
 ```bash
 # Clone both repos
 git clone https://github.com/RzLetsCode/portfolio-template-main.git source
-git clone https://github.com/RzLetsCode/portfolio-main.git target
+git clone https://github.com/RzLetsCode/code2career_ai.git target
 
 # Copy all files from source to target
 cd source
@@ -155,14 +155,14 @@ After migration, verify:
 - [ ] No broken image paths
 - [ ] All internal links work
 - [ ] GitHub Pages builds successfully
-- [ ] Site displays correctly at https://rzletscode.github.io/portfolio-main/
+- [ ] Site displays correctly at https://rzletscode.github.io/code2career_ai/
 
 ---
 
 ## File Structure Expected
 
 ```
-portfolio-main/
+code2career_ai/
 ├── index.html
 ├── about-me.html
 ├── skill-set.html

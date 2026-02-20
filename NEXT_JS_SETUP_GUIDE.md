@@ -4,8 +4,8 @@
 
 ### Step 1: Clone and Setup
 ```bash
-git clone https://github.com/RzLetsCode/portfolio-main.git
-cd portfolio-main
+git clone https://github.com/RzLetsCode/code2career_ai.git
+cd code2career_ai
 npm install
 ```
 
@@ -87,4 +87,4 @@ git push
 2. Create files using VS Code
 3. Push to GitHub
 4. Enable GitHub Pages
-5. Visit https://rzletscode.github.io/portfolio-main/
+5. Visit https://rzletscode.github.io/code2career_ai/

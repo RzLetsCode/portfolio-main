@@ -9,7 +9,7 @@ Enterprise AI Architect portfolio built with **Next.js** showcasing expertise in
 - Azure Cloud infrastructure & DevOps practices
 - Production-grade ML systems & MLOps
 
-**Live Portfolio:** [rzletscode.github.io/portfolio-main](https://rzletscode.github.io/portfolio-main/)
+**Live Portfolio:** [rzletscode.github.io/code2career_ai](https://rzletscode.github.io/code2career_ai/)
 
 ---
 
@@ -59,7 +59,7 @@ Enterprise AI Architect portfolio built with **Next.js** showcasing expertise in
 ## 📁 Project Structure
 
 ```
-portfolio-main/
+code2career_ai/
 ├── app/
 │   ├── components/
 │   │   ├── BlogCard.tsx          # Blog post display
@@ -100,8 +100,8 @@ portfolio-main/
 
 ```bash
 # Clone repository
-git clone https://github.com/RzLetsCode/portfolio-main.git
-cd portfolio-main
+git clone https://github.com/RzLetsCode/code2career_ai.git
+cd code2career_ai
 
 # Install dependencies
 npm install
@@ -170,7 +170,7 @@ The contact form requires **EmailJS** configuration:
 
 1. Push to `main` branch
 2. GitHub Actions automatically builds and deploys
-3. Site live at: `https://rzletscode.github.io/portfolio-main/`
+3. Site live at: `https://rzletscode.github.io/code2career_ai/`
 
 **Deployment Status:** Check `.github/workflows/deploy.yml`
 

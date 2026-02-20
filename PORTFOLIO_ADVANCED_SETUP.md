@@ -12,7 +12,7 @@ This is a **high-end professional portfolio** built with:
 ## 🏗️ Project Structure
 
 ```
-portfolio-main/
+code2career_ai/
 ├── .github/workflows/
 │   ├── nextjs.yml              # Deployment workflow
 │   └── fetch-youtube-videos.yml # Daily YouTube fetch automation
@@ -186,7 +186,7 @@ npm run build
 # Files in 'out/' directory are ready for deployment
 ```
 
-**Site URL**: `https://rzletscode.github.io/portfolio-main/`
+**Site URL**: `https://rzletscode.github.io/code2career_ai/`
 
 ## 💡 Development Tips
 

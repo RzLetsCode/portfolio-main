@@ -1,4 +1,4 @@
-# Portfolio-Main Repository Bifurcation Guide
+# code2career_ai Repository Bifurcation Guide
 
 ## Overview
 This repository contains the **RzLetsCode Personal Portfolio** - extracted from the original monorepo `portfolio-template-main`.
@@ -17,8 +17,8 @@ This repository contains the **RzLetsCode Personal Portfolio** - extracted from 
 ### Local Development
 ```bash
 # Clone this repository
-git clone https://github.com/RzLetsCode/portfolio-main.git
-cd portfolio-main
+git clone https://github.com/RzLetsCode/code2career_ai.git
+cd code2career_ai
 
 # Run a local server
 python -m http.server 8000
@@ -29,7 +29,7 @@ python -m http.server 8000
 
 ### File Structure
 ```
-portfolio-main/
+code2career_ai/
 ├── index.html              # Landing page
 ├── about-me.html           # Professional background
 ├── skill-set.html          # Technical skills
@@ -66,7 +66,7 @@ For contact form functionality:
 1. Go to Settings > Pages
 2. Set source to "Deploy from branch"
 3. Select "main" branch and "/ (root)" folder
-4. Site will be deployed at: `https://rzletscode.github.io/portfolio-main/`
+4. Site will be deployed at: `https://rzletscode.github.io/code2career_ai/`
 
 ## Development Standards
 - Semantic HTML5 markup

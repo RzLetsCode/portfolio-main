@@ -7,8 +7,8 @@
 
 ## 📋 DEPLOYMENT OVERVIEW
 
-- **Repository:** https://github.com/RzLetsCode/portfolio-main
-- **Live Site:** https://rzletscode.github.io/portfolio-main/
+- **Repository:** https://github.com/RzLetsCode/code2career_ai
+- **Live Site:** https://rzletscode.github.io/code2career_ai/
 - **Deployment Method:** GitHub Pages (Automatic)
 - **Build Status:** ✅ Success
 - **Total Build Time:** 51 seconds
@@ -151,7 +151,7 @@
 
 6. **Pages Deployment**
    - Domain: github.io
-   - CNAME: portfolio-main
+   - CNAME: code2career_ai
    - Status: Active
 
 ---
@@ -167,7 +167,7 @@
 - ✅ Deployed to GitHub Pages
 
 ### Live Site Verification
-- ✅ Site accessible at https://rzletscode.github.io/portfolio-main/
+- ✅ Site accessible at https://rzletscode.github.io/code2career_ai/
 - ✅ Hero section rendering correctly
 - ✅ Navigation menu functional
 - ✅ Contact section visible
@@ -267,8 +267,8 @@ Date:   Thu Feb 19 18:00:00 2026 +0530
 
 1. **Clone Repository**
    ```bash
-   git clone https://github.com/RzLetsCode/portfolio-main.git
-   cd portfolio-main
+   git clone https://github.com/RzLetsCode/code2career_ai.git
+   cd code2career_ai
    ```
 
 2. **Create Feature Branch**
@@ -304,7 +304,7 @@ Date:   Thu Feb 19 18:00:00 2026 +0530
 7. **Auto-Deployment**
    - GitHub Actions automatically builds
    - Site updates within 1-2 minutes
-   - Verify changes at https://rzletscode.github.io/portfolio-main/
+   - Verify changes at https://rzletscode.github.io/code2career_ai/
 
 ---
 
@@ -333,11 +333,11 @@ Date:   Thu Feb 19 18:00:00 2026 +0530
 
 ## 📞 IMPORTANT LINKS
 
-- **Repository:** https://github.com/RzLetsCode/portfolio-main
-- **Live Site:** https://rzletscode.github.io/portfolio-main/
-- **Actions Dashboard:** https://github.com/RzLetsCode/portfolio-main/actions
-- **Deployments Page:** https://github.com/RzLetsCode/portfolio-main/deployments
-- **Issues Tracker:** https://github.com/RzLetsCode/portfolio-main/issues
+- **Repository:** https://github.com/RzLetsCode/code2career_ai
+- **Live Site:** https://rzletscode.github.io/code2career_ai/
+- **Actions Dashboard:** https://github.com/RzLetsCode/code2career_ai/actions
+- **Deployments Page:** https://github.com/RzLetsCode/code2career_ai/deployments
+- **Issues Tracker:** https://github.com/RzLetsCode/code2career_ai/issues
 
 ---
 

@@ -15,7 +15,7 @@ Rajesh Kumar's Professional Portfolio - A modern, responsive portfolio website s
 ## Directory Structure
 
 ```
-portfolio-main/
+code2career_ai/
 ├── index.html              # Home page
 ├── about-me.html           # About page
 ├── portfolio.html          # Projects showcase
