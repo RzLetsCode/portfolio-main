@@ -210,7 +210,7 @@ Learn to design, build, and deploy advanced AI solutions. Master production-grad
   &copy; {new Date().getFullYear()} code2career_ai <span className="mx-3 text-slate-600">&bull;</span> <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent italic">Where boundaries break, breakthroughs happen.</span>
 </p>
  <div className="flex gap-6">
- <Link href="https://hashnode.com/@rz111" target="_blank" className="hover:text-cyan-400 transition-colors">BLOGS</Link>
+ <Link href="https://hashnode.com/@code2career-ai" target="_blank" className="hover:text-cyan-400 transition-colors">BLOGS</Link>
  <Link href="https://www.youtube.com/@Code2Career_AI" target="_blank" className="hover:text-red-500 transition-colors">YOUTUBE</Link>
  <Link href="https://github.com/RzLetsCode" target="_blank" className="hover:text-cyan-400 transition-colors">GITHUB</Link>
  </div>
