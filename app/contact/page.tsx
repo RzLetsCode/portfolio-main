@@ -35,7 +35,6 @@ export default function ContactPage() {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Map your React state to the variables in your EmailJS template
     const templateParams = {
       from_name: formData.name,
       from_email: formData.email,
@@ -43,8 +42,16 @@ export default function ContactPage() {
       message: formData.purpose,
     };
 
+    // --- DEBUGGING LOGS ---
+    // These will print to your browser's Developer Tools Console
+    console.log("=== EMAILJS DEBUG INFO ===");
+    console.log("Service ID:", process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID);
+    console.log("Template ID:", process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID);
+    console.log("Public Key:", process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY);
+    console.log("Payload:", templateParams);
+    console.log("==========================");
+
     try {
-      // Send directly to EmailJS, bypassing the need for a local API route
       const response = await emailjs.send(
         process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
         process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
@@ -62,9 +69,9 @@ export default function ContactPage() {
         });
         setTimeout(() => setSubmitMessage(''), 5000);
       }
-    } catch (error) {
-      console.error('EmailJS Error:', error);
-      setSubmitMessage('Error sending message. Please check your connection and try again.');
+    } catch (error: any) {
+      console.error('EmailJS Error Object:', error);
+      setSubmitMessage(`Error: ${error.text || 'Failed to send message. Please try again.'}`);
     } finally {
       setIsSubmitting(false);
     }
